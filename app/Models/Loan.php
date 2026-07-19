@@ -15,9 +15,12 @@ class Loan extends Model
     ];
 
     protected $casts = [
+        'user_id' => 'integer',
+        'book_id' => 'integer',
         'borrow_date' => 'date',
         'due_date' => 'date',
         'return_date' => 'date',
+        'fine_amount' => 'integer',
     ];
 
     protected $with = ['book', 'user'];
